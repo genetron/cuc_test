@@ -20,9 +20,6 @@ public class CucTest extends SpringIntegrationTest{
 	
 	private ResponseEntity<String> latestResponse;
 	
-//	@Value("${api.url}")
-//	private String apiUrl;
-	
 	
 	@When("^the client calls /version$")
 	public void the_client_issues_GET_version() throws Throwable{
