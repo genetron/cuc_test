@@ -23,13 +23,13 @@ public class CucTest extends SpringIntegrationTest{
 	
 	@When("^the client calls /version$")
 	public void the_client_issues_GET_version() throws Throwable{
-		latestResponse = executeGet("http://localhost:8080/version");
+		latestResponse = executeGet("http://localhost:8082/version");
 	}
 
 	@Then("^the client receives status code of (\\d+)$")
 	public void the_client_receives_status_code_of(int statusCode) throws Throwable {
 	    HttpStatus currentStatusCode = latestResponse.getStatusCode();
-	    assertThat("status code is incorrect : "+ 
+	    assertThat("status code : "+ 
 	    latestResponse.getBody(), currentStatusCode.value(), is(statusCode));
 	}
 
